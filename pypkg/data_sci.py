@@ -47,6 +47,8 @@ def sort_n_slice(itr, n, desc=False):
     return itr[:n]
 
 
-is_odd = lambda x : bool(x & 1)
+def is_odd(x):
+    return lambda : bool(x & 1)
 
-is_even = lambda x : not is_odd(x)
+def is_even(x):
+    return lambda : not is_odd(x)
